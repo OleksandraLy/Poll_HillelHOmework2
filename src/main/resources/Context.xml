@@ -9,10 +9,7 @@
     <bean id="askPersonalInfo" class="services.AskPersonalInfo"/>
     <bean id="askCsvQuestions" class="services.AskCsvQuestions"/>
 
-    <bean id="askQuestions" class="services.AskQuestions">
-        <constructor-arg name="nameString" value="nameString"/>
-        <constructor-arg name="surnameString" value="surnameStrings"/>
-    </bean>
+    <bean id="askQuestions" class="services.AskQuestions"/>
 
     <bean id = "pollParticipant" class = "entities.PollParticipant">
         <constructor-arg name="name" value="Evelyne"/>
