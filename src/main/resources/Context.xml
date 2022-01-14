@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="csvToHashMap" class="services.CsvToHashMap"/>
+    <bean id="askPersonalInfo" class="services.AskPersonalInfo"/>
+    <bean id="askCsvQuestions" class="services.AskCsvQuestions"/>
+
+    <bean id="askQuestions" class="services.AskQuestions">
+        <constructor-arg name="nameString" value="nameString"/>
+        <constructor-arg name="surnameString" value="surnameStrings"/>
+    </bean>
+
+    <bean id = "pollParticipant" class = "entities.PollParticipant">
+        <constructor-arg name="name" value="Evelyne"/>
+        <constructor-arg name="surname" value="Price"/>
+        <constructor-arg name="age" value="45"/>
+        <constructor-arg name="profession" value="librarian"/>
+        <constructor-arg name="usePublicTransport" value="yes"/>
+        <constructor-arg name="perWeek" value="12"/>
+        <constructor-arg name="transportType" value="subway"/>
+    </bean>
+    <context:annotation-config />
+</beans>
